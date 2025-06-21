@@ -149,7 +149,12 @@ shift + cmd - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 shift + cmd - s : yabai -m window --toggle sticky --toggle pip
 
 # Kill focused window 
-shift + cmd - c : osascript -e 'tell application "System Events" to tell (first process whose frontmost is true) to quit'
+#cmd + shift - c : osascript -e 'tell application "System Events" to tell (first process whose frontmost is true) to quit'
+#cmd - shift - c : osascript -e 'tell application (path to frontmost application as text) to quit'
+#cmd - shift - c : osascript -e 'tell application "System Events" to set frontApp to name of first application process whose frontmost is true' -e 'do shell script "killall \\"" & frontApp & "\\""'
+#cmd + shift - c : ./Scripts/close_front_app.sh
+cmd + shift - c : yabai -m window --close 
+
 
 # Launch terminal 
-shift + cmd - return : open -a "Ghostty"
+cmd + shift - return : osascript -e 'tell application "Ghostty" to activate'
