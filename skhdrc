@@ -1,3 +1,4 @@
+
 # ################################################################ #
 # THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
 # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
@@ -103,7 +104,7 @@ shift + alt - 0 : yabai -m space --balance
 
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
-# shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
 
 # focus monitor
 # ctrl + alt - z  : yabai -m display --focus prev
@@ -155,3 +156,6 @@ cmd + shift - return : osascript -e 'tell application "Ghostty" to activate'
 # Restart Services
 shift + cmd - x : yabai --restart-service
 shift + cmd - w : skhd --restart-service
+
+# Lockscreen with screensave
+cmd - l : open -a "ScreenSaverEngine"
